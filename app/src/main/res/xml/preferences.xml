@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Conexão">
+        <ListPreference
+            android:key="connection_mode"
+            android:title="Modo de conexão"
+            android:summary="%s"
+            android:entries="@array/connection_modes"
+            android:entryValues="@array/connection_mode_values"
+            android:defaultValue="local" />
+            
+        <EditTextPreference
+            android:key="local_server_url"
+            android:title="Servidor local"
+            android:summary="Endereço do servidor na rede local"
+            android:defaultValue="http://192.168.0.10:8011"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Rotação">
+        <EditTextPreference
+            android:key="rotation_interval"
+            android:title="Intervalo de rotação"
+            android:summary="Segundos entre cada tela"
+            android:defaultValue="10"
+            app:useSimpleSummaryProvider="true"
+            android:inputType="number" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Telas a exibir">
+        <CheckBoxPreference
+            android:key="screen_sistema"
+            android:title="Sistema"
+            android:summary="CPU, memória, disco, temperatura"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="screen_tetra"
+            android:title="TETRA"
+            android:summary="Status dos troncos e SDR"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="screen_pistar"
+            android:title="Pi-Star"
+            android:summary="Última estação DMR ouvida"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="screen_docker"
+            android:title="Docker / Serviços"
+            android:summary="Containers e serviços do sistema"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="screen_rede"
+            android:title="Rede"
+            android:summary="Tráfego e túnel Cloudflare"
+            android:defaultValue="true" />
+
+        <CheckBoxPreference
+            android:key="screen_leitura"
+            android:title="Leitura"
+            android:summary="Livro atual e progresso"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PP5RD Status</string>
+    <string name="settings">Configurações</string>
+    <string name="server_url">Endereço do servidor</string>
+    <string name="server_url_summary">URL base (ex: http://192.168.0.10:8011)</string>
+    <string name="rotation_interval">Intervalo de rotação</string>
+    <string name="rotation_interval_summary">Segundos entre cada tela</string>
+    <string name="screen_sistema">Sistema</string>
+    <string name="screen_tetra">TETRA</string>
+    <string name="screen_pistar">Pi-Star</string>
+    <string name="screen_docker">Docker</string>
+    <string name="screen_rede">Rede</string>
+    <string name="connecting">Conectando...</string>
+    <string name="error_connection">Erro de conexão</string>
+    <string name="tap_to_configure">Toque para configurar</string>
+    <string name="cpu">CPU</string>
+    <string name="memory">Memória</string>
+    <string name="disk">Disco</string>
+    <string name="temp">Temperatura</string>
+    <string name="uptime">Uptime</string>
+    <string name="load">Load</string>
+    
+    <string-array name="connection_modes">
+        <item>Local (rede interna)</item>
+        <item>Externo (túnel Cloudflare)</item>
+    </string-array>
+    <string-array name="connection_mode_values">
+        <item>local</item>
+        <item>external</item>
+    </string-array>
+</resources>

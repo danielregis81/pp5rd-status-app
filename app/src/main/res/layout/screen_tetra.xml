@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+
+    <!-- Coluna esquerda: Status geral + Troncos -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginEnd="6dp"
+        android:orientation="vertical">
+
+        <!-- Status geral -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            style="@style/CardStyle"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <View
+                android:id="@+id/tetraSdrLed"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@color/accent_green" />
+
+            <TextView
+                android:id="@+id/tetraSdrStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                tools:text="SDR Ativo" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tetraListeners"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/accent_orange"
+                    tools:text="0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ouvintes"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Troncos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            style="@style/CardStyle"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Troncos TETRA"
+                style="@style/LabelText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <!-- Tronco 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/trunk1Led"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:background="@color/accent_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="T1"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_orange" />
+
+                    <TextView
+                        android:id="@+id/trunk1Freq"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        tools:text="000.000 MHz" />
+
+                    <TextView
+                        android:id="@+id/trunk1Voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/accent_green"
+                        tools:text="●●●" />
+                </LinearLayout>
+
+                <!-- Tronco 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/trunk2Led"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:background="@color/accent_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="T2"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_orange" />
+
+                    <TextView
+                        android:id="@+id/trunk2Freq"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        tools:text="000.000 MHz" />
+
+                    <TextView
+                        android:id="@+id/trunk2Voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/accent_green"
+                        tools:text="" />
+                </LinearLayout>
+
+                <!-- Tronco 3 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/trunk3Led"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:background="@color/accent_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="T3"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_orange" />
+
+                    <TextView
+                        android:id="@+id/trunk3Freq"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        tools:text="000.000 MHz" />
+
+                    <TextView
+                        android:id="@+id/trunk3Voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/accent_green"
+                        tools:text="" />
+                </LinearLayout>
+
+                <!-- Tronco 4 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/trunk4Led"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:background="@color/accent_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="T4"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_orange" />
+
+                    <TextView
+                        android:id="@+id/trunk4Freq"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/text_primary"
+                        tools:text="000.000 MHz" />
+
+                    <TextView
+                        android:id="@+id/trunk4Voice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/accent_green"
+                        tools:text="●●●" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Coluna direita: Player -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="6dp"
+        style="@style/CardStyle"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎧 Ouvir"
+            style="@style/LabelText" />
+
+        <!-- Seleção de canal - 2x2 grid -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTrunk1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:text="T1"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary"
+                    android:backgroundTint="@color/card_border" />
+
+                <Button
+                    android:id="@+id/btnTrunk2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="T2"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary"
+                    android:backgroundTint="@color/card_border" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnTrunk3"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="4dp"
+                    android:text="T3"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary"
+                    android:backgroundTint="@color/card_border" />
+
+                <Button
+                    android:id="@+id/btnTrunk4"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:text="T4"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_secondary"
+                    android:backgroundTint="@color/card_border" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Botão Play/Stop -->
+        <Button
+            android:id="@+id/btnPlayStop"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:text="▶  Play"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:backgroundTint="@color/accent_green" />
+
+        <!-- Volume -->
+        <SeekBar
+            android:id="@+id/volumeBar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:progress="80"
+            android:progressTint="@color/accent_orange"
+            android:thumbTint="@color/accent_orange"
+            android:minHeight="40dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Status do player -->
+        <TextView
+            android:id="@+id/playerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary"
+            android:text="Escolha um tronco" />
+
+    </LinearLayout>
+
+</LinearLayout>

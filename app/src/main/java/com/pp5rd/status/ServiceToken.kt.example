@@ -1,0 +1,19 @@
+package com.pp5rd.status
+
+/**
+ * Cloudflare Access Service Token.
+ * 
+ * Para usar o modo "Externo", crie um Service Token no Cloudflare Zero Trust
+ * e coloque os valores aqui. NÃO commitar este arquivo com tokens reais.
+ * 
+ * 1. Cloudflare Zero Trust → Access → Service Auth → Create Service Token
+ * 2. Copie o Client ID e Client Secret gerados
+ * 3. Cole abaixo
+ */
+object ServiceToken {
+    const val CLIENT_ID = "seu-client-id.access"
+    const val CLIENT_SECRET = "cfast_seu-client-secret"
+    // login Basic Auth do servidor de audio TETRA
+    const val TETRA_USER = "usuario-tetra"
+    const val TETRA_PASS = "senha-tetra"
+}

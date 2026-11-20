@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+
+    <!-- Coluna esquerda: Estação atual (maior) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:layout_marginEnd="6dp"
+        style="@style/CardStyle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Bandeira maior -->
+            <ImageView
+                android:id="@+id/pistarFlag"
+                android:layout_width="80dp"
+                android:layout_height="53dp"
+                android:scaleType="centerCrop"
+                android:background="@color/card_border" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <!-- Callsign bem grande -->
+                <TextView
+                    android:id="@+id/pistarCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary"
+                    tools:text="PP5RD" />
+
+                <!-- País -->
+                <TextView
+                    android:id="@+id/pistarCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/text_secondary"
+                    tools:text="Brazil" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pistarStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/accent_red"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="NO AR" />
+        </LinearLayout>
+
+        <!-- Nome grande -->
+        <TextView
+            android:id="@+id/pistarName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="24sp"
+            android:textColor="@color/text_primary"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Daniel Regis" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="12dp"
+            android:background="@color/card_border" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/pistarTg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="28sp"
+                android:textColor="@color/accent_orange"
+                android:textStyle="bold"
+                tools:text="72453" />
+
+            <TextView
+                android:id="@+id/pistarMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/text_primary"
+                tools:text="DMR Slot 2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pistarDuration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"
+                tools:text="32 s" />
+
+            <TextView
+                android:id="@+id/pistarBer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                tools:text="BER 0.2%" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Coluna direita: Últimos (menor) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="6dp"
+        style="@style/CardStyle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Últimos"
+                style="@style/LabelText" />
+
+            <TextView
+                android:id="@+id/pistarToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                tools:text="hoje: 12 / 5 países" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pistarLastContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+</LinearLayout>

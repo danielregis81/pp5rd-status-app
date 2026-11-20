@@ -1,0 +1,20 @@
+package com.pp5rd.status
+
+/**
+ * Configuração local da instalação (endereços e frequências).
+ * Copie para LocalConfig.kt e preencha com os seus valores.
+ * LocalConfig.kt está no .gitignore: não commitar.
+ */
+object LocalConfig {
+    // modo Externo (via túnel Cloudflare)
+    const val EXTERNAL_STATS_URL = "https://status.example.com"
+    const val EXTERNAL_PISTAR_URL = "https://pistar.example.com"
+    // modo Local (rede de casa)
+    const val DEFAULT_LOCAL_URL = "http://192.168.0.10:8011"
+    const val LOCAL_PISTAR_URL = "http://pi-star.local"
+    // áudio TETRA: URL do tronco N = TETRA_STREAM_PREFIX + N + TETRA_STREAM_SUFFIX
+    const val TETRA_STREAM_PREFIX = "https://tetra.example.com/tetra"
+    const val TETRA_STREAM_SUFFIX = ".mp3"
+    // frequências (MHz) dos troncos T1..T4
+    val TETRA_FREQS = listOf("000.000", "000.000", "000.000", "000.000")
+}

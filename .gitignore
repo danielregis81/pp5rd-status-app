@@ -1,0 +1,18 @@
+# Build
+.gradle/
+build/
+app/build/
+*.apk
+
+# IDE
+.idea/
+*.iml
+local.properties
+
+# Secrets - NÃO commitar o token real
+app/src/main/java/com/pp5rd/status/ServiceToken.kt
+app/src/main/java/com/pp5rd/status/LocalConfig.kt
+
+# System
+.DS_Store
+Thumbs.db

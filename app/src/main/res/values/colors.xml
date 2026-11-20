@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores do tema escuro (mesmo do painel web) -->
+    <color name="background">#0D1117</color>
+    <color name="card">#161B22</color>
+    <color name="card_border">#30363D</color>
+    <color name="text_primary">#E6EDF3</color>
+    <color name="text_secondary">#8B949E</color>
+    <color name="accent_orange">#FC8019</color>
+    <color name="accent_green">#3FB950</color>
+    <color name="accent_yellow">#D29922</color>
+    <color name="accent_red">#F85149</color>
+    <color name="accent_blue">#58A6FF</color>
+    <color name="bar_background">#30363D</color>
+</resources>
